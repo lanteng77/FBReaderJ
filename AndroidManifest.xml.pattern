@@ -103,6 +103,7 @@
 			</intent-filter>
 			<intent-filter>
 				<action android:name="android.intent.action.SEARCH"/>
+				<category android:name="android.intent.category.DEFAULT"/>
 			</intent-filter>
 			<meta-data android:name="android.app.searchable" android:resource="@xml/searchable"/>
 		</activity>
@@ -230,6 +231,12 @@
 				<action android:name="android.intent.action.VIEW"/>
 				<category android:name="android.intent.category.DEFAULT"/>
 				<data android:host="*" android:scheme="litres-book"/>
+			</intent-filter>
+		</activity>
+		<activity android:name="org.geometerplus.fbreader.bookmarks.addon.Answer">
+			<intent-filter>
+				<action android:name="org.geometerplus.android.fbreader.language"/>
+				<category android:name="android.intent.category.DEFAULT"/>
 			</intent-filter>
 		</activity>
 		<receiver android:name="org.geometerplus.android.fbreader.network.ListenerCallback" android:process=":networkLibrary">

@@ -232,6 +232,12 @@
 				<data android:host="*" android:scheme="litres-book"/>
 			</intent-filter>
 		</activity>
+		<activity android:name="org.geometerplus.fbreader.bookmarks.addon.Answer">
+			<intent-filter>
+				<action android:name="org.geometerplus.android.fbreader.language"/>
+				<category android:name="android.intent.category.DEFAULT"/>
+			</intent-filter>
+		</activity>
 		<receiver android:name="org.geometerplus.android.fbreader.network.ListenerCallback" android:process=":networkLibrary">
 			<intent-filter>
 				<action android:name="android.fbreader.action.network.SIGNIN"/>

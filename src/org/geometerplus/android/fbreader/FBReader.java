@@ -172,7 +172,7 @@ public final class FBReader extends Activity {
 	@Override
 	protected void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
-
+		
 		Thread.setDefaultUncaughtExceptionHandler(new UncaughtExceptionHandler(this));
 
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -284,7 +284,7 @@ public final class FBReader extends Activity {
 	protected void onNewIntent(final Intent intent) {
 		final String action = intent.getAction();
 		final Uri data = intent.getData();
-
+		
 		if ((intent.getFlags() & Intent.FLAG_ACTIVITY_LAUNCHED_FROM_HISTORY) != 0) {
 			super.onNewIntent(intent);
 		} else if (Intent.ACTION_VIEW.equals(action)
@@ -320,6 +320,7 @@ public final class FBReader extends Activity {
 				}
 			};
 			UIUtil.wait("search", runnable, this);
+			
 		} else {
 			super.onNewIntent(intent);
 		}
